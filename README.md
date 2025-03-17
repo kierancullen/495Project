@@ -50,11 +50,8 @@ An initial generation of L-systems is created randomly. Each L-system's axiom co
 From each generation, a certain proportion of robots that score the best on some fitness measure are mutated to produce the next generation. L-systems can mutate in the following ways:
 
 - Symbols can be added, deleted, or replaced in the axiom or in the pattern of a production.
-
 - The input parameters of a symbol in the axiom can be modified.
-
 - A production's weights can be modified.
-
 - The number of iterations can increase or decrease.
 
 Currently, the fitness measure is the distance traveled horizontally by the robot over the course of the simulation. This is scored based on the displacement of the robot's leftmost point, to prevent long robots that simply collapse or unfold in the horizontal direction.
