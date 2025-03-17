@@ -8,10 +8,10 @@ The common set of symbols used for the L-systems is shown in the table below, al
 |--------|---------------|
 | $+(\theta)$ | Turn counterclockwise by $\theta$ |
 | $-(\theta)$ | Turn clockwise by $\theta$ |
-| $[$ | Save the current position and angle |
-| $]$ | Restore the last-saved position and angle |
-| ${$ | Begin a block of symbols whose commands will be repeated |
-| $}(s)$ | End a block of symbols whose commands will be repeated, and repeat them $s$ times |
+| [ | Save the current position and angle |
+| ] | Restore the last-saved position and angle |
+| { | Begin a block of symbols whose commands will be repeated |
+| }$(s)$ | End a block of symbols whose commands will be repeated, and repeat them $s$ times |
 | $F(l, w, a, \omega, \phi)$ | Create an actuated rectangle of dimensions $l \times w$ at the current position; set the actuation to be a sine wave of amplitude $a$, frequency $\omega$, and phase shift $\phi$ |
 | $G(l, w)$ | Create an unactuated rectangle of dimensions $l \times w$ at the current position |
 
@@ -31,15 +31,23 @@ $$
 
 The matrix maps the vector $[x, y, 1]^T$ to:
 
-$$
-\begin{bmatrix}
-2x \\
-3y \\
-y \\
-x+1 \\
+$\begin{bmatrix}
+2 & 0 & 0\\
+0 & 3 & 0\\
+0 & 1 & 0\\
+1 & 0 & 1\\
+1 & 1 & 0
+\end{bmatrix}\begin{bmatrix}
+x\\
+y\\
+1
+\end{bmatrix} =\begin{bmatrix}
+2x\\
+3y\\
+y\\
+x+1\\
 y
-\end{bmatrix}
-$$
+\end{bmatrix}$
 
 So if $P_1(x, y)$ appears in the axiom, when the L-system is iterated it is replaced by $G(2x, 3y)+(y)P_1(x+1, y)$. This treatment of production rules as special symbols differs from the standard definition of an L-system, but it is easy to see that it is equivalent.
 
