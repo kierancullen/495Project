@@ -49,13 +49,13 @@ An initial generation of L-systems is created randomly. Each L-system's axiom co
 
 From each generation, a certain proportion of robots that score the best on some fitness measure are mutated to produce the next generation. L-systems can mutate in the following ways:
 
--Symbols can be added, deleted, or replaced in the axiom or in the pattern of a production.
+- Symbols can be added, deleted, or replaced in the axiom or in the pattern of a production.
 
--The input parameters of a symbol in the axiom can be modified.
+- The input parameters of a symbol in the axiom can be modified.
 
--A production's weights can be modified.
+- A production's weights can be modified.
 
--The number of iterations can increase or decrease.
+- The number of iterations can increase or decrease.
 
 Currently, the fitness measure is the distance traveled horizontally by the robot over the course of the simulation. This is scored based on the displacement of the robot's leftmost point, to prevent long robots that simply collapse or unfold in the horizontal direction.
 
@@ -77,7 +77,7 @@ An optional penalty was later added to reduce a robot's fitness based on the app
 
 ## Setup of the Codebase
 
--The definition of the L-system framework, symbols, and mutation rules is in `LSystem.py`. 
--The evolutionary algorithm is contained in `evolve.py`. When run, it creates a folder called `"structures"` that saves each L-system as a pickled `.json` file and includes screenshots of each robot. 
--`loadStructure.py` loads a single L-system from a `.json` file, and displays the MPM simulation of the resulting robot. It can also be used to export a `.mp4` video of the simulation. 
--The parsing of L-systems to create robots and the MPM simulation is done in `mpm.py`.
+- The definition of the L-system framework, symbols, and mutation rules is in `LSystem.py`. 
+- The evolutionary algorithm is contained in `evolve.py`. When run, it creates a folder called `"structures"` that saves each L-system as a pickled `.json` file and includes screenshots of each robot. 
+- `loadStructure.py` loads a single L-system from a `.json` file, and displays the MPM simulation of the resulting robot. It can also be used to export a `.mp4` video of the simulation. 
+- The parsing of L-systems to create robots and the MPM simulation is done in `mpm.py`.
