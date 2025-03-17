@@ -1,6 +1,6 @@
-#ME495/CS396 Final Project
+# ME495/CS396 Final Project
 ![header image](https://github.com/kierancullen/495Project/blob/main/lineage2.png?raw=true)
-This project consists of a framework for defining robot structures using L-systems in a TaiChi MPM simulation, as well as an evolutionary algorithm for generating L-systems that produce robots with favorable traits, such as good locomotion ability in the simulation. L-systems are used to define both the structure and actuation controls of the robots. Avoiding the use of a separate gradient descent or reinforcement learning step to determine the actuation controls allows the evolutionary algorithm to be much faster.
+This project provides framework for defining robot structures using L-systems in a TaiChi MPM simulation, as well as an evolutionary algorithm for generating L-systems that produce robots with favorable traits, such as good locomotion ability in the simulation. L-systems are used to define both the structure and actuation controls of the robots. Avoiding the use of a separate gradient descent or reinforcement learning step to determine the actuation controls allows the evolutionary algorithm to be much faster.
 
 ## L-system framework
 
@@ -76,7 +76,7 @@ The evolutionary algorithm was tested using a generation size of 50 robots, muta
 
 The plot below shows the top fitness score and the fitness score cutoff for the top decile for each generation in one run of the algorithm. Since the fitness measure uses the displacement of the robot's leftmost point and the screen has width 1, scores of 0.8 and higher are very difficult to improve upon while maintaining a robot of a reasonable size.
 
-![fitness image](https://github.com/kierancullen/495Project/blob/main/fitnessplot.png?raw=true)
+![fitness image](https://github.com/kierancullen/495Project/blob/main/fitnessPlot.png?raw=true)
 
 L-systems are highly sensitive to small mutations. The alteration of even a single symbol can silence the generation of large parts of a robot's structure and greatly reduce its fitness. The significant regressions in the fitness score, especially for the top decile, on the plot above are therefore to be expected.
 
