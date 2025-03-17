@@ -1,3 +1,5 @@
+![header image](https://github.com/kierancullen/495Project/blob/main/lineage.png?raw=true)
+
 This project consists of a framework for defining robot structures using L-systems in a TaiChi MPM simulation, as well as an evolutionary algorithm for generating L-systems that produce robots with favorable traits, such as good locomotion ability in the simulation. L-systems are used to define both the structure and actuation controls of the robots. Avoiding the use of a separate gradient descent or reinforcement learning step to determine the actuation controls allows the evolutionary algorithm to be much faster.
 
 ## L-system framework
@@ -70,7 +72,7 @@ Currently, the fitness measure is the distance traveled horizontally by the robo
 
 The evolutionary algorithm was tested using a generation size of 50 robots, mutating the top 5 from each generation to produce the next, and creating 50 generations total. Across multiple runs, the algorithm reliably arrives at ball-shaped structures that roll very well, such as the one shown below.
 
-(Insert GIF here)
+![roll image](https://github.com/kierancullen/495Project/blob/main/rollExample.gif?raw=true)
 
 The plot below shows the top fitness score and the fitness score cutoff for the top decile for each generation in one run of the algorithm. Since the fitness measure uses the displacement of the robot's leftmost point and the screen has width 1, scores of 0.8 and higher are very difficult to improve upon while maintaining a robot of a reasonable size.
 
@@ -80,7 +82,7 @@ L-systems are highly sensitive to small mutations. The alteration of even a sing
 
 An optional penalty was later added to reduce a robot's fitness based on the approximate number of rotations it makes over the course of the simulation. On every time step, the rotation angle of each particle about the structure's center of mass relative to the previous time step is computed, and an average is taken over all particles. The average rotation angles from each time step are summed at the end of the simulation, multiplied by a weighting constant, and deducted from the fitness score. This successfully encourages the development of robots that move by walking or bouncing, one of which is shown below.
 
-(Insert image here)
+![walk image](https://github.com/kierancullen/495Project/blob/main/walkExample.gif?raw=true)
 
 ## Setup of the codebase
 
