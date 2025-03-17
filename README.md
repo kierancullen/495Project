@@ -76,7 +76,8 @@ The evolutionary algorithm was tested using a generation size of 50 robots, muta
 
 The plot below shows the top fitness score and the fitness score cutoff for the top decile for each generation in one run of the algorithm. Since the fitness measure uses the displacement of the robot's leftmost point and the screen has width 1, scores of 0.8 and higher are very difficult to improve upon while maintaining a robot of a reasonable size.
 
-<img src="https://github.com/kierancullen/495Project/blob/main/fitnessPlot.png?raw=true" alt="fitness image" width="300" height="200">
+
+<img src="https://github.com/kierancullen/495Project/blob/main/fitnessPlot.png?raw=true" alt="fitness image" width="500" height="200">
 
 L-systems are highly sensitive to small mutations. The alteration of even a single symbol can silence the generation of large parts of a robot's structure and greatly reduce its fitness. The significant regressions in the fitness score, especially for the top decile, on the plot above are therefore to be expected.
 
