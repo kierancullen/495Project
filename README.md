@@ -1,4 +1,4 @@
-![header image](https://github.com/kierancullen/495Project/blob/main/lineage.png?raw=true)
+![header image](https://github.com/kierancullen/495Project/blob/main/lineage2.png?raw=true)
 
 This project consists of a framework for defining robot structures using L-systems in a TaiChi MPM simulation, as well as an evolutionary algorithm for generating L-systems that produce robots with favorable traits, such as good locomotion ability in the simulation. L-systems are used to define both the structure and actuation controls of the robots. Avoiding the use of a separate gradient descent or reinforcement learning step to determine the actuation controls allows the evolutionary algorithm to be much faster.
 
